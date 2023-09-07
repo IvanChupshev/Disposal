@@ -1,0 +1,482 @@
+@font-face {
+    font-family: "Alternate-Gothic-No1";
+    src:local("Alternate-Gothic-No1"),
+        url("fonts/alternategothicno1.otf");
+}
+/*....................................................................................
+Обнуление
+.....................................................................................*/
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*....................................................................................
+Заготовка
+.....................................................................................*/
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    font-family: Inter;
+    background: #E5E5E5;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    margin: 0px auto;
+}
+main li {
+    list-style-image: url("img/about/li.png");
+    list-style-position: inside;
+}
+/*....................................................................................
+HEADER
+.....................................................................................*/
+.header {
+    width: 100%;
+    background: #222830;
+}
+.header__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 77px;
+}
+.header__container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__container li:not(:last-child) {
+    margin: 0 50px 0 0;
+}
+.header__container a {
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+}
+.arrow{
+    margin-top: 9px;
+    padding-left: 13px ;
+}
+/*....................................................................................
+MAIN
+.....................................................................................*/
+.mainblock__container {
+    position: absolute;
+    z-index: 1;
+    margin: 10% 0 0 18%;
+}
+.mainblock__container h1 {
+    font: 110px "Alternate-Gothic-No1";
+    line-height: 100px;
+    text-shadow: 12px 12px #93C1C1;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+}
+.mainblock__container p {
+    line-height: 19px;
+    letter-spacing: 0.045em;
+    max-width: 350px;
+    margin: 15px 0 0;
+}
+.mainblock__but {
+    margin: 50px 0 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    text-shadow: 2px 2px #F39483;
+}
+.mainblock__but button {
+    background: #000;
+    color: #FFFFFF;
+    border-radius: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #F39483;
+}
+.mainblock__img {
+    background: #D9DDE0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/*....................................................................................
+ABOUT US
+.....................................................................................*/
+.aboutus__container {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+}
+.aboutus__content {
+    max-width: 475px;
+    font-size: 18px;
+    line-height: 26.1px;
+}
+.aboutus strong {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 43.5px;
+}
+.aboutus p:not(:last-child) {
+    margin: 0 0 30px;
+}
+.aboutus__number {
+    margin: 35px 0 20px;
+}
+.aboutus__number, .aboutus__mail {
+    font: 60px "Alternate-Gothic-No1";
+    color: #222830;
+    line-height: 66.5px;
+    text-shadow: 5px 5px #93C1C1;
+}
+.aboutus__cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.aboutus__cards__item {
+    width: 320px;
+    height: 380px;
+    background: #D9DDE0;
+    text-align: center;
+    margin: 15px;
+    font: 40px "Alternate-Gothic-No1";
+    color: #222830;
+    line-height: 44.3px;
+    padding: 15% 0;
+    transition: transform .5s linear;
+    transform: perspective(600px) rotateY(0deg);
+    border-radius: 10px;
+}
+.aboutus__cards__item__back {
+    margin: -400px 0 0 15px;
+    width: 320px;
+    height: 380px;
+    font-weight: 300;
+    line-height: 19.3px;
+    padding: 15px;
+    background: #D9DDE0;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    transform: perspective(600px) rotateY(180deg);
+}
+.aboutus__cards__item__back ul li {
+    margin: 20px 0 0;
+    font-weight: 300;
+    line-height: 19.3px;
+}
+.aboutus__card:hover > .aboutus__cards__item{
+    transform: perspective(600px) rotateY(-180deg);
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.aboutus__card:hover > .aboutus__cards__item__back{
+    transform: perspective(600px) rotateY(0deg);
+}
+/*....................................................................................
+SERVICES
+.....................................................................................*/
+.services {
+    margin: 0 0 144px 0;
+}
+.services__header {
+    width: 100%;
+}
+.services__header__container {
+    display: grid;
+    grid-template-areas: ". h1" "ch p";
+    justify-content: space-around;
+    margin: 150px 0 0;
+}
+.services__header__change h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #274A2A;
+}
+.header__change__item {
+    margin: 25px 0 0;
+    display: flex;
+    align-items: center;
+}
+.change__num {
+    width: 28px;
+    height: 22px;
+    padding: 4px 0;
+    margin: 0 12px 0 0;
+    background:#222830;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+.header__change__item p {
+    line-height: 19px;
+    letter-spacing: 0.045em;
+}
+#h1 {
+    grid-area: h1;
+    font: 80px "Alternate-Gothic-No1";
+    line-height: 88.6px;
+    color: #222830;
+}
+#ch {
+    grid-area: ch;
+}
+#p {
+    grid-area: p;
+    max-width: 670px;
+    line-height: 23.2px;
+}
+.services__body li {
+    list-style-position: outside;
+}
+.services__body__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.services__body__item {
+    margin: 150px 0 0;
+    width: 575px;
+    height: 420px;
+    background: #F1F0F0;
+    border-radius: 10px;
+}
+.services__body__start {
+    display: flex;
+    align-items: center;
+}
+.services__body__img img {
+    position: relative;
+    left: -50px;
+    top: -40px;
+}
+.services__body__but {
+    min-width: 170px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.045em;
+    text-shadow: 2px 2px #93C1C1;
+    cursor: pointer;
+}
+.services__body__but h2 {
+    font: 30px "Alternate-Gothic-No1";
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #274A2A;
+    cursor: default;
+}
+.services__body__but button {
+    width: 28px;
+    height: 22px;
+    background: #222830;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 2px 2px #93C1C1;
+    cursor: pointer;
+}
+.services__body__end {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    font-weight: 300;
+    line-height: 19px;
+}
+/*....................................................................................
+FACTS
+.....................................................................................*/
+.facts {
+    margin: 60px 0 0px;
+}
+.facts h1 {
+    text-align: center;
+    font: 60px "Alternate-Gothic-No1";
+    line-height: 66px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px #93C1C1;
+}
+.facts p {
+    width: 70%;
+    margin: 40px auto 0;
+    line-height: 145%;
+}
+/*....................................................................................
+FORM
+.....................................................................................*/
+.form {
+    background:#D9DDE0;
+    width: 80%;
+    height: 575px;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 150px;
+}
+.form__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form__content h1 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 145%;
+    color: #222830;
+    margin: 0 0 22px;
+}
+.form__content div {
+    font-size: 18px;
+    line-height: 145%;
+}
+.form__content p {
+    margin: 10px 0 0;
+    font: 60px "Alternate-Gothic-No1";
+    line-height: 66px;
+    color: #222830;
+    text-shadow: 5px 5px #93C1C1;
+}
+.form__container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 34px 0;
+}
+.form__container form input {
+    width: 505px;
+    height: 55px;
+    padding: 15px;
+    border: 1px solid #16110D;
+    border-radius: 10px;
+    background: none;
+    margin: 0 0 21px;
+}
+#form__text {
+    width: 505px;
+    height: 220px;
+    padding: 15px;
+    border: 1px solid #16110D;
+    border-radius: 10px;
+    background: none;
+    margin: 0 0 21px;
+}
+.form__container form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    width: 79%;
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.045em;
+    text-shadow: 2px 2px #F39483;
+}
+.form__btn button {
+    width: 28px;
+    height: 22px;
+    background: #222830;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 2px 2px #93C1C1;
+    cursor: pointer;
+}
+#form__text::placeholder, .form__container form input {
+    font: 14px inter;
+}
+/*....................................................................................
+PARTNERS
+.....................................................................................*/
+.partners {
+    margin: 150px auto 0;
+    width: 80%;
+}
+.partners h1 {
+    text-align: center;
+    font: 80px "Alternate-Gothic-No1";
+    line-height: 89px;
+    text-transform: uppercase;
+    color: #222830;
+}
+.partners__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px 0 0;
+}
+.partners__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F1F0F0;
+    width: 220px;
+    height: 135px;
+    cursor: pointer;
+}
+.partners__item:not(:last-child) {
+    margin: 0 23px 0 0;
+}
+#nowrap {
+    margin: 0;
+}
+.partners__item__top {
+    display: flex;
+}
+.partners__item__down {
+    margin: 37px 0 0;
+    display: flex;
+}
+.partners__grey {
+    position: absolute;
+    z-index: 1;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.partners__item:hover .partners__grey {
+    z-index: -1;
+}
+/*....................................................................................
+FOOTER
+.....................................................................................*/
+footer {
+    margin: 160px 0 0;
+    border-top: 1px solid #222830;
+}
+.footer__container {
+    padding: 28px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+}
